@@ -1,0 +1,22 @@
+
+<p> 
+
+<p>
+
+<table>
+  <tr>
+    <th>Clothing Type</th>
+	<th>Clothing Store </th>
+    <th>Email</th>
+    </tr>
+
+<% @subscriptions.each do |sub| %>
+  <tr>
+    <td><%= sub.clothtype %></td>
+    <td><%= sub.clothstore %></td>
+    <td><%= sub.useremail %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

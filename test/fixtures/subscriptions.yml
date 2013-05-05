@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  clothtype: MyString
+  clothstore: MyString
+  useremail: MyString
+
+two:
+  clothtype: MyString
+  clothstore: MyString
+  useremail: MyString

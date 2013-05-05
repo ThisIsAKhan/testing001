@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+	<title>Clothera</title>
+	<link rel="StyleSheet" href="css/style.css" TYPE="text/css" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,200,700' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/html5shiv.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script>
+
+	$(document).ready(function(){
+
+		$("#type").val("Type of clothes - eg. Jeans");
+
+		$("#type").click(function(){
+		    if ($("#type").val() == "Type of clothes - eg. Jeans") {
+				$("#type").val("");
+			}
+		})
+
+		$("#type").blur(function(){
+			if($("#type").val() == "") {
+			    $("#type").val("Type of clothes - eg. Jeans");
+			}
+		})
+
+        $("#brand").val("Store or brand - eg. Gap");
+
+		$("#brand").click(function(){
+			if($("#brand").val() == "Store or brand - eg. Gap") {
+				$("#brand").val("");
+			}
+		})
+
+		$("#brand").blur(function(){
+			if($("#brand").val() == "") {
+			    $("#brand").val("Store or brand - eg. Gap");
+			}
+		})
+
+		$("#type2").val("Jeans");
+
+		$("#type2").click(function(){
+			if($("#type2").val() == "Jeans") {
+				$("#type2").val("");
+			}
+		})
+
+		$("#type2").blur(function(){
+			if($("#type2").val() == "") {
+				$("#type2").val("Jeans");
+			}
+		})
+
+		$("#brand2").val("Abercrombie");
+
+		$("#brand2").click(function(){
+			if($("#brand2").val() == "Abercrombie") {
+				$("#brand2").val("");
+			}
+		})
+
+		$("#brand2").blur(function(){
+			if($("#brand2").val() == "") {
+				$("#brand2").val("Abercrombie");
+			}
+		})
+
+		$("#search").click(function() {
+
+			var product = $("#type").val();
+			var brand = $("#brand").val();
+
+			$("span.product").text(product);
+			$("span.brand").text(brand);
+
+			$("#popUp").fadeIn(500);
+
+		})
+
+		$("#close").click(function(){
+			$("#popUp").fadeOut(500);
+		})
+
+		$("#type").keyup(function() {
+			if($("#type").val()!=""){
+				$("#typeSuggestion").fadeIn(300);
+			}
+			if($("#type").val()=="") {
+				$("#typeSuggestion").fadeOut(300);
+			}
+
+		})
+
+		$("#brand").keyup(function() {
+			if($("#brand").val()!="") {
+				$("#brandSuggestion").fadeIn(300);
+			}
+
+			if($("#brand").val()=="") {
+				$("#brandSuggestion").fadeOut(300);
+			}
+
+		})
+
+	})
+
+	</script>
+</head>
+<body>
+
+	<div id="container">
+		<!-- HEADER -->
+		<header>
+			<h1 id="logo">
+                  < >CLOTHERA
+            </h1>
+		</header>
+		<!-- END OF HEADER -->
+
+		<!-- SEARCH CONTENT -->
+		<section id="searchContent" class="clearfix" >
+			
+		
+
+			<div id="leadText">Get the <span class="orange">clothes</span> you love on <span class="orange" >sale</span></h1> 
+
+			<section id="searchForm">
+
+				<input type="text" id="type" name="type" />
+				<input type="text" id="brand" name="store" />
+				<input type="button" id="search" name="search" value="Let me know!" /> <br/>
+			
+
+			</section>
+
+			<!--<div class="example">
+				<img src="images/example1.png" alt="INC, Sleeveless Surplice Scarf-Print Maxi" />
+				<div class="productName">INC, Sleeveless Surplice Scarf-Print Maxi</div>
+			</div>
+
+			<div class="example">
+				<img src="images/example2.png" alt="Kenneth Cole , Sleeveless exotic print maxi" />
+				<div class="productName">Kenneth Cole , Sleeveless exotic print maxi</div>
+			</div>
+
+			<div class="example">
+				<img src="images/example3.png" alt="Style&amp;Co Printed Maxi" />
+				<div class="productName center">Style&amp;Co Printed Maxi</div>
+			</div>-->
+
+            	<div id="popUp">
+				<h1> We’ll email you when it’s on sale.</h1>
+				<div id="close"></div>
+				<span class="product">pants</span> from <span class="brand">Something</span><br/>
+				<div id="popUpForm">
+				
+					<input type="text" id="email" name="email"  /> 
+					<input type="submit" id="send" name="send" value="Submit" />
+				</div>
+				<span class="marginRight">We promise - no spam.</span>
+			</div>
+
+		</section>
+		<!-- END OF SEARCH AREA -->
+
+		<!-- INFO AREA -->
+		<section id="info" class="clearfix">
+
+ 			<div id="leadText">How it Works</div>
+
+			<div class="box">
+            <input type="text" class="grayBox" id="brand2" />
+				<input type="text" class="grayBox" id="type2" />
+				<div class="textBlob">
+					Tell us what store or brands you love, and what you kind of clothes you’re looking for 
+			    </div >
+				
+				<h3>Tell us what you want</h3>
+
+
+			</div>
+
+			<div class="box">
+                
+				<input type="button" class="signUp" value="Sign Up" name="signUp" />
+				<div class="textBlob">
+					Sign up to get an email when those items go on sale. <br /> No spam we promise
+				</div>
+				<h3>Sign up with your email</h3>
+			</div>
+
+			<div class="box">
+			
+				<%= image_tag "mail.png" %>
+				<div class="textBlob">
+					Get an email once a week, whenever those items are on sale.
+			
+					Save money and look great. 
+				</div >
+				<h3>Know when it’s on sale</h3>
+			</div>
+
+		</section>
+
+		<!-- END OF INFO AREA -->
+
+		<!-- FOOTER -->
+		<footer class="clearfix">
+			<div class="box">
+			
+				<%= image_tag "profile1.png" %>
+				<div class="bio">
+				Sadi got tired of always buying clothes from the same brands and stores at the worst prices. 
+				</div>
+			</div>
+
+			<div class="box">
+				<%= image_tag "profile2.png" %>
+				
+					<div class="bio">
+				Murtada’s a lifelong entrepreneur who’s just couldnt wait to dress well for cheap anymore
+				</div>				
+			</div>
+		</footer>
+
+		<!-- END OF FOOTER -->
+
+	</div>
+
+</body>
+</html>

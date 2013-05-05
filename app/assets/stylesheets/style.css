@@ -1,0 +1,433 @@
+@font-face {
+    font-family: 'MenschRegular';
+    src: url('/media/fonts/mensch-wf.eot');
+    src: url('/media/fonts/mensch-wf.eot?#iefix') format('embedded-opentype'),
+         url('/media/fonts/mensch-wf.woff') format('woff'),
+         url('/media/fonts/mensch-wf.ttf') format('truetype'),
+         url('/media/fonts/mensch-wf.svg#MenschMenschRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('/media/fontsSourceSansPro-ExtraLight-webfont.eot');
+    src: url('/media/fonts/SourceSansPro-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/fonts/SourceSansPro-ExtraLight-webfont.woff') format('woff'),
+         url('/media/fonts/SourceSansPro-ExtraLight-webfont.ttf') format('truetype'),
+         url('/media/fonts/SourceSansPro-ExtraLight-webfont.svg#SourceSansProExtraLight') format('/media/fonts/source-sans-pro/Svg');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('/media/fonts/SourceSansPro-Regular-webfont.eot');
+    src: url('/media/fonts/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/fonts/SourceSansPro-Regular-webfont.woff') format('woff'),
+         url('/media/fonts/SourceSansPro-Regular-webfont.ttf') format('truetype'),
+         url('/media/fonts/SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('/media/fonts/source-sans-pro/Svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('/media/fonts/SourceSansPro-Semibold-webfont.eot');
+    src: url('/media/fonts/SourceSansPro-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/fonts/SourceSansPro-Semibold-webfont.woff') format('woff'),
+         url('/media/fonts/SourceSansPro-Semibold-webfont.ttf') format('truetype'),
+         url('/media/fonts/SourceSansPro-Semibold-webfont.svg#SourceSansProSemibold') format('/media/fonts/source-sans-pro/Svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('/media/fonts/SourceSansPro-Bold-webfont.eot');
+    src: url('/media/fonts/SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/media/fonts/SourceSansPro-Bold-webfont.woff') format('woff'),
+         url('/media/fonts/SourceSansPro-Bold-webfont.ttf') format('truetype'),
+         url('/media/fonts/SourceSansPro-Bold-webfont.svg#SourceSansProBold') format('/media/fonts/source-sans-pro/Svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	font-family: Source Sans Pro;
+
+}
+
+.clearfix:after {
+	display:table;
+	content:"";
+	clear:both;
+}
+
+#container {
+	max-width:900px;
+	margin:0 auto;
+}
+
+/* HEADER */
+
+header {
+	width:100%;
+	border-bottom:2px solid #666666;
+	padding:9px 0 20px 0;
+	overflow:hidden;
+}
+
+
+#leadText
+{
+    font-family:"Source Sans Pro Light";
+    font-weight: 100;
+    font-size: 65px;
+    color: #444;
+    letter-spacing: -1px;
+    text-rendering: optimizelegibility;
+}
+
+
+
+h1#logo {
+    font-family: "Mensch";
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 46px;
+    font-weight: normal;
+    color: #de3f1c; 
+    
+}
+
+/*  HEADER END*/
+
+/* SEARCH FORM  */
+
+    #searchContent {
+	width:100%;
+	height:auto;
+	border-bottom:2px solid #666666;
+	padding:80px 0 90px 0;
+	position:relative;
+}
+
+#searchContent h1 {
+	font-size:65px;
+	font-weight:400;
+	color:#000;
+	word-spacing:5px;
+}
+
+#popUp {
+	width:728px;
+	height:auto;
+	border: 2px solid #666;
+	background:#fff;
+	border-radius:10px;
+	padding:15px 20px 20px 20px;
+	text-align:center;
+	font-size:14px;
+	position:absolute;
+	left:50%;
+	top:245px;
+	margin-left:-364px;
+	z-index:5;
+	display:none;
+}
+
+#popUp h1{
+	font-size:36px;
+	color:#000;
+	text-align:left;
+	margin-bottom:50px;
+}
+
+#popUp input[type="text"] {
+	width:360px;
+	height:50px;
+	border:3px solid #ccc;
+	border-radius:10px;
+	font-size:24px;
+	color:#666666;
+	padding:0px 0px 0px 25px;
+	margin-right:15px;
+}
+
+
+#popUp input[type="text"]:focus {
+	box-shadow: 0 0 10px 3px #de3f1c;
+	border-color:#ccc;
+	outline: none;
+}
+
+#popUpForm {
+	margin-top:40px;
+}
+
+#close {
+	width:17px;
+	height:18px;
+	background:url(close.png) no-repeat;
+	position:absolute;
+	right:15px;
+	top:15px;
+	cursor:pointer;
+}
+
+span.product {
+	font-size:24px;
+	color:#ccc;
+	margin-right:25px !important;
+}
+
+span.brand {
+	font-size:24px;
+	color:#ccc;
+	margin-left:25px;
+}
+
+span.marginRight {
+	margin-right:190px;
+}
+
+
+span.orange 
+{
+    font-family:"Source Sans Pro Semibold";
+	font-weight:500;
+	color:#de3f1c;
+	margin-right:10px;
+}
+
+#searchForm {
+	margin:50px 0 50px 0px;
+	position:relative;
+}
+
+#searchForm input[type="text"] {
+	width:256px;
+	height:50px;
+	border:3px solid #666666;
+	border-radius:10px;
+	font-size:20px;
+	color:#666666;
+	padding:0px 0px 0px 15px;
+	margin-right:15px;
+	font-family: Source Sans Pro;
+	
+}
+
+#searchForm input[type="text"]:focus {
+	box-shadow: 0 0 10px 3px #de3f1c;
+	border-color:#ccc;
+	outline: none;
+}
+
+#typeSuggestion {
+	width:234px;
+	height:50px;
+	background:white;
+	border:1px solid #ccc;
+	position:absolute;
+	top:50px;
+	left:11px;
+	display:none;
+}
+
+#brandSuggestion {
+	width:234px;
+	height:50px;
+	background:white;
+	border:1px solid #ccc;
+	left:286px;
+	display:none;
+}
+
+.siteButton 
+{
+	width:165px;
+	height:55px;
+	background:#de3f1c;
+	border:0;
+	border-radius:10px;
+	font-size:20px;
+	font-weight:700;
+	color:#fff;
+	outline:none;
+	-webkit-transition-property: color, background; 
+	-webkit-transition-duration: 0.5s, 0.5s; 
+	-webkit-transition-timing-function: ease;
+
+	-moz-transition-property: color, background,border; 
+	-moz-transition-duration:0.5s; 
+	-moz-transition-timing-function: ease; 
+	
+	-o-transition-property: color, background,border; 
+	-o-transition-duration:0.5s; 
+	-o-transition-timing-function: ease;
+}
+
+
+
+#searchContent input[type="button"]:hover {
+	background:#666;
+}
+
+span.clothsEx {
+	font-size:14px;
+	font-weight:400;
+	margin:10px 0 0 20px;;
+}
+
+span.brandEx {
+	font-size:14px;
+	font-weight:400;
+	margin:10px 0 0 220px;
+}
+
+.example {
+	width:193px;
+	height:auto;
+	margin:0 40px 0 0;
+	float:left;
+}
+
+.example img {
+	width:193px;
+	height:215px;
+}
+
+.productName {
+	width:100%;
+	height:32px;
+	background:#ccc;
+	font-size:12px;
+	color:#000;
+	padding-left:4px;
+}
+
+.productName.center {
+	padding-top:7px
+}
+
+/* END SEARCH FORM */ 
+
+/* Footer and Info box */
+
+.box {
+	width:260px;
+	margin:0px 20px;
+	float:left;
+
+
+}
+
+.textBlob
+{
+    font-family: Source Sans Pro;
+	font-size: 18px;
+}
+
+.bio
+{
+    margin-top : 15px;
+    font-family: Source Sans Pro;
+	font-size: 12px;
+}
+
+/* END BOX*/
+
+/* INFO */
+
+#info {
+	width:100%;
+	border-bottom: 2px solid #666;
+	padding: 20px 0 70px 0;
+
+}
+
+#info h1 {
+	font-size:65px;
+	margin:0 0 75px 5px;
+	color:#000;
+	font-weight:400;
+}
+
+#info .box {
+	text-align:center;
+	font-size:13px;
+	margin-top:30px;
+}
+
+#info h3 {
+	font-family: 'Myriad Pro';
+	font-size:24px;
+	font-weight:700;
+	color:#de3f1c;
+	margin-top:15px;
+}
+
+img.mail {
+	margin:0px auto 10px auto;
+}
+
+
+.grayBox{
+	width:110px;
+	height:30px;
+	background:#ccc;
+	border:0;
+	font-size:14px;
+	color:#000;
+	margin:0px 3px 10px 12px;
+	border-radius:5px;
+	text-align:left;
+	padding:0px 0 0 10px;
+	outline:none;
+}
+
+.signUp {
+	width:110px;
+	height:30px;
+	background:#ccc;
+	font-size:14px;
+	color:#000;
+	border:0;
+	margin:0px auto 10px auto;
+	border-radius:5px;
+	text-align:center;
+	cursor:pointer;
+}
+/* END INFO */
+
+/*FOOTER */
+
+footer {
+	width:100%;
+	background:#ccc;
+	margin-top:90px;
+}
+
+footer .box {
+	
+}
+
+footer .box img {
+	position:relative;
+	top:-8px;
+	float:left;
+	margin-right:13px;
+}
+
+footer p {
+	text-align:left;
+	font-size:10px;
+	margin-top:25px;
+}
