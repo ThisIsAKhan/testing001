@@ -8,8 +8,17 @@ class SubscriptionsController < ApplicationController
 	puts ("inside new")
 	@subscription = Subscription.new(params[:subscription])
 	@subscription.save
-	
   end
+  
+  def index 
+  
+  @subscription = Subscription.new
+   respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @subscription }
+    end
+  end
+
   
  
    def viewall
