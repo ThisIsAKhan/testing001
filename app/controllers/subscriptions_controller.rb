@@ -1,9 +1,6 @@
 class SubscriptionsController < ApplicationController
-  def create
- 	puts ("inside create")
-	@subscription = Subscription.new(params[:subInfo])
-  end
-  
+ 
+ 
   def new
 	puts ("inside new")
 	@subscription = Subscription.new(params[:subscription])
