@@ -34,4 +34,15 @@ Testing001::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Mail configurations 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.sendgrid.net",
+    :port                 => 587,
+    :domain               => 'clothera.com',
+    :user_name            => 'SadiKhan',
+    :password             => 'Cl0thera!',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
 end

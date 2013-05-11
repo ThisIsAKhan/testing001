@@ -29,6 +29,14 @@ class SubscriptionsController < ApplicationController
     end
   end
   
-  
+  def sendmail_last
+	@sub = Subscription.last
+	
+	puts("sending mail to : " + @sub.useremail)
+	
+	UserMailer.welcome_email(@sub).deliver
+	
+	puts("have sent mail ...")
+  end
   
 end

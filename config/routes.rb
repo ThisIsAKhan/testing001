@@ -2,6 +2,7 @@ Testing001::Application.routes.draw do
 
   match '/subscriptions/new', to: 'subscriptions#new'
   match '/subscriptions/viewall', to: 'subscriptions#viewall'
+   match '/subscriptions/sendlast', to: 'subscriptions#sendmail_last'
   
   #resources :subscriptions
 
